@@ -19,11 +19,11 @@ public class Main2Activity extends AppCompatActivity {
     public void calculation(View v){
         double D,s, K, l, result;
         D = 0; s = 0; result = 0; l = 0;
-        EditText DText = (EditText) findViewById(R.id.D);
-        EditText SText = (EditText) findViewById(R.id.s);
-        EditText LText = (EditText) findViewById(R.id.l);
+        EditText DText = (EditText) findViewById(R.id.K);
+        EditText SText = (EditText) findViewById(R.id.K);
+        EditText LText = (EditText) findViewById(R.id.K);
         TextView KText = (TextView) findViewById(R.id.K);
-        TextView ResultText = (TextView) findViewById(R.id.result);
+        TextView ResultText = (TextView) findViewById(R.id.resobshmas);
         D = Double.parseDouble(DText.getText().toString()) * 0.001;
         s = Double.parseDouble(SText.getText().toString()) * 0.001;
         K = Double.parseDouble(KText.getText().toString());

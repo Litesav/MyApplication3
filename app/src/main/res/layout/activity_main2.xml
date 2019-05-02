@@ -4,251 +4,417 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/background_light"
+    android:background="@mipmap/fon"
     tools:context=".Main2Activity">
 
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="45dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="320dp"
-        android:layout_marginTop="388dp"
-        android:text="м"
-        android:textSize="24sp"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="143dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/материал5"
-        android:layout_width="107dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="376dp"
-        android:text="Длина"
-        android:textSize="30sp"
+        <LinearLayout
+            android:layout_width="164dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Расчет "
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/po_dline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="По длине"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/po_masse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="По массе"
+                    android:textSize="18sp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="209dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@mipmap/test" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="365dp"
+        android:layout_height="62dp"
+        android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
-    <EditText
-        android:id="@+id/l"
-        android:layout_width="158dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="372dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:onClick="calculation"
-        android:text="0"
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Материал"
+            android:textAlignment="center"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:backgroundTintMode="multiply" />
+
+            <Button
+                android:id="@+id/add"
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:foreground="@android:drawable/ic_input_add"
+                android:foregroundGravity="center" />
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="50dp"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="numberSigned|numberDecimal"
+                android:text="0"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="2dp"
+                android:layout_height="17dp"
+                android:layout_weight="1"
+                android:text="г/см³" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="325dp"
+        android:layout_height="332dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="152dp"
-        android:layout_height="166dp"
-        android:layout_marginStart="260dp"
-        android:layout_marginTop="4dp"
-        android:visibility="visible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_launcher_round" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="210dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="128dp"
-        android:layout_marginEnd="196dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Параметры изделия"
+                android:textAlignment="center"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/Материал"
-        android:layout_width="152dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="260dp"
-        android:text="Диаметр"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/материал2"
-        android:layout_width="152dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="324dp"
-        android:text="Толщина"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/txtD"
+                android:layout_width="2dp"
+                android:layout_height="49dp"
+                android:layout_weight="1"
+                android:text="Диаметр"
+                android:textAlignment="textStart"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/материал3"
-        android:layout_width="98dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="476dp"
-        android:text="Масса"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/D"
+                android:layout_width="46dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="numberSigned|numberDecimal"
+                android:text="0"
+                android:textAlignment="center" />
 
-    <TextView
-        android:id="@+id/result"
-        android:layout_width="126dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="476dp"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/m1"
+                android:layout_width="wrap_content"
+                android:layout_height="49dp"
+                android:layout_weight="1"
+                android:text="м"
+                android:textSize="20sp" />
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/материал"
-        android:layout_width="152dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="80dp"
-        android:text="Материал"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="93dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="28dp"
-        android:text="труба"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/txtL"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Длина"
+                android:textAlignment="textStart"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="139dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="28dp"
-        android:text="Изделие:"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/l"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="numberSigned|numberDecimal"
+                android:text="0"
+                android:textAlignment="center" />
 
-    <View
-        android:id="@+id/divider12"
-        android:layout_width="415dp"
-        android:layout_height="7dp"
-        android:layout_marginTop="436dp"
-        android:background="@color/colorPrimaryDark"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/m2"
+                android:layout_width="99dp"
+                android:layout_height="49dp"
+                android:layout_weight="1"
+                android:text="м"
+                android:textSize="20sp" />
+        </LinearLayout>
 
-    <EditText
-        android:id="@+id/D"
-        android:layout_width="158dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="260dp"
-        android:ems="10"
-        android:inputType="numberSigned|numberDecimal"
-        android:onClick="calculation"
-        android:text="0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/s"
-        android:layout_width="158dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="324dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:onClick="calculation"
-        android:text="0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/txtK"
+                android:layout_width="25dp"
+                android:layout_height="49dp"
+                android:layout_weight="1"
+                android:text="Количество"
+                android:textAlignment="textStart"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="196dp"
-        android:text="Плотность:"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/K"
+                android:layout_width="7dp"
+                android:layout_height="43dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="numberSigned|numberDecimal"
+                android:text="0"
+                android:textAlignment="center" />
 
-    <TextView
-        android:id="@+id/unit"
-        android:layout_width="75dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="232dp"
-        android:layout_marginTop="200dp"
-        android:text="кг/м³"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/sht"
+                android:layout_width="wrap_content"
+                android:layout_height="49dp"
+                android:layout_weight="1"
+                android:text="шт"
+                android:textSize="20sp" />
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/K"
-        android:layout_width="72dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="172dp"
-        android:layout_marginTop="200dp"
-        android:text="7850"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="45dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="320dp"
-        android:layout_marginTop="340dp"
-        android:text="мм"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="60dp"
+                android:layout_height="49dp"
+                android:layout_weight="1"
+                android:text="Цена за 1 кг"
+                android:textAlignment="textStart"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="35dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="336dp"
-        android:layout_marginTop="476dp"
-        android:text="кг"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/s"
+                android:layout_width="51dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="numberSigned|numberDecimal"
+                android:text="0"
+                android:textAlignment="center" />
 
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="51dp"
-        android:layout_height="26dp"
-        android:layout_marginStart="320dp"
-        android:layout_marginTop="268dp"
-        android:text="мм"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="49dp"
+                android:layout_weight="1"
+                android:text="у.е"
+                android:textSize="20sp" />
+        </LinearLayout>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="172dp"
-        android:layout_marginTop="536dp"
-        android:background="@color/colorPrimary"
-        android:onClick="calculation"
-        android:text="Посчитать"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="129dp"
+            android:background="@drawable/back2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Результаты"
+                android:textAlignment="center"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtmassa1gometra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=" Масса 1-го метра:"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/resmas"
+                    android:layout_width="158dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtresobshmas"
+                    android:layout_width="103dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=" Общая масса:"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/resobshmas"
+                    android:layout_width="158dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtstoimost1sht"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=" Стоимость 1 шт."
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtue"
+                    android:layout_width="158dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="165dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text=" Общая стоимость:"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtobshue"
+                    android:layout_width="158dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/holo_blue_light"
+            android:foreground="?attr/actionModeShareDrawable"
+            android:foregroundGravity="center" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@android:color/holo_orange_light"
+            android:text="Рассчитать"
+            android:textColor="@android:color/background_light" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/holo_blue_light"
+            android:foreground="@android:drawable/ic_menu_save"
+            android:foregroundGravity="center" />
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
